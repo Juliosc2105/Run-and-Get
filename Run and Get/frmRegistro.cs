@@ -7,11 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
+using System.IO;
+
+using MySql.Data.MySqlClient;
 
 namespace Run_and_Get
 {
     public partial class frmRegistro : Form
     {
+
+        MySqlConnection conexao = new MySqlConnection(
+            "Persist Security Info = False;" + //não pedir usuário e senha para conectar
+            "server = localhost;" + //Local onde está o banco de dados
+            "database =run_and_get;" + //nome do banco de dados
+            "uid=root;" + //usuario do banco de dados
+            "pwd="
+            );
+
         public frmRegistro()
         {
             InitializeComponent();
@@ -59,7 +72,34 @@ namespace Run_and_Get
                 {
                     if (rbtTermos.Checked)
                     {
-                        //BDD
+                        try
+                        {
+                            conexao.Open();
+                            if (conexao.State == ConnectionState.Open)
+                            {
+                                MySqlCommand comandoSQL = conexao.CreateCommand();
+
+                                comandoSQL.CommandText = "INSERT INTO login" +
+                                    "(login, nome, senha, email, dia, mes, ano)" +
+                                    "VALUES" +
+                                    "('" + txtLogin.Text + "','" + txtNome.Text + "','" + txtSenha.Text + "','" + 
+                                    txtEmail.Text + "','" + cbxDia.Text + "','" + cbxMes.Text + "','" + cbxAno.Text + "')";
+                                comandoSQL.Connection = conexao;
+                                comandoSQL.ExecuteNonQuery();
+                                conexao.Close();
+                                Close();
+                            }
+                        }
+                        catch (Exception Erro)
+                        {
+
+                            MessageBox.Show
+                                ("Houve um erro na inserção do novo registro no banco de dados: \n\n" + Erro.ToString(),
+                                "Informação de Erro!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                                );
+                        }
                     }
                     else
                     {
