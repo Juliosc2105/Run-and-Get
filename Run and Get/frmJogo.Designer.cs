@@ -31,20 +31,21 @@ namespace Run_and_Get
         {
             this.components = new System.ComponentModel.Container();
             this.btnTeste = new System.Windows.Forms.Panel();
+            this.lblTituVidas = new System.Windows.Forms.Label();
+            this.lblEnergia = new System.Windows.Forms.Label();
+            this.lblTituEnergia = new System.Windows.Forms.Label();
+            this.lblPontos = new System.Windows.Forms.Label();
+            this.lblTituPontos = new System.Windows.Forms.Label();
+            this.lblVidas = new System.Windows.Forms.Label();
             this.lblY = new System.Windows.Forms.Label();
             this.lblDistY = new System.Windows.Forms.Label();
-            this.lblVidas = new System.Windows.Forms.Label();
             this.lblX = new System.Windows.Forms.Label();
             this.lblDistX = new System.Windows.Forms.Label();
             this.lblTicks = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pbxJogador = new System.Windows.Forms.PictureBox();
-            this.lblTituPontos = new System.Windows.Forms.Label();
-            this.lblPontos = new System.Windows.Forms.Label();
-            this.lblTituEnergia = new System.Windows.Forms.Label();
-            this.lblEnergia = new System.Windows.Forms.Label();
-            this.lblTituVidas = new System.Windows.Forms.Label();
             this.lblValorTicks = new System.Windows.Forms.Label();
+            this.pgbEnergia = new System.Windows.Forms.ProgressBar();
             this.btnTeste.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxJogador)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +53,7 @@ namespace Run_and_Get
             // btnTeste
             // 
             this.btnTeste.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+            this.btnTeste.Controls.Add(this.pgbEnergia);
             this.btnTeste.Controls.Add(this.lblTituVidas);
             this.btnTeste.Controls.Add(this.lblEnergia);
             this.btnTeste.Controls.Add(this.lblTituEnergia);
@@ -63,6 +65,78 @@ namespace Run_and_Get
             this.btnTeste.Name = "btnTeste";
             this.btnTeste.Size = new System.Drawing.Size(900, 100);
             this.btnTeste.TabIndex = 0;
+            // 
+            // lblTituVidas
+            // 
+            this.lblTituVidas.AutoSize = true;
+            this.lblTituVidas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituVidas.ForeColor = System.Drawing.Color.White;
+            this.lblTituVidas.Location = new System.Drawing.Point(307, 22);
+            this.lblTituVidas.Name = "lblTituVidas";
+            this.lblTituVidas.Size = new System.Drawing.Size(61, 22);
+            this.lblTituVidas.TabIndex = 8;
+            this.lblTituVidas.Text = "Vidas";
+            this.lblTituVidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblEnergia
+            // 
+            this.lblEnergia.AutoSize = true;
+            this.lblEnergia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnergia.ForeColor = System.Drawing.Color.White;
+            this.lblEnergia.Location = new System.Drawing.Point(578, 46);
+            this.lblEnergia.Name = "lblEnergia";
+            this.lblEnergia.Size = new System.Drawing.Size(21, 22);
+            this.lblEnergia.TabIndex = 7;
+            this.lblEnergia.Text = "0";
+            this.lblEnergia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTituEnergia
+            // 
+            this.lblTituEnergia.AutoSize = true;
+            this.lblTituEnergia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituEnergia.ForeColor = System.Drawing.Color.White;
+            this.lblTituEnergia.Location = new System.Drawing.Point(550, 22);
+            this.lblTituEnergia.Name = "lblTituEnergia";
+            this.lblTituEnergia.Size = new System.Drawing.Size(81, 22);
+            this.lblTituEnergia.TabIndex = 6;
+            this.lblTituEnergia.Text = "Energia";
+            this.lblTituEnergia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblPontos
+            // 
+            this.lblPontos.AutoSize = true;
+            this.lblPontos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPontos.ForeColor = System.Drawing.Color.White;
+            this.lblPontos.Location = new System.Drawing.Point(438, 44);
+            this.lblPontos.Name = "lblPontos";
+            this.lblPontos.Size = new System.Drawing.Size(41, 43);
+            this.lblPontos.TabIndex = 5;
+            this.lblPontos.Text = "0";
+            this.lblPontos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblTituPontos
+            // 
+            this.lblTituPontos.AutoSize = true;
+            this.lblTituPontos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituPontos.ForeColor = System.Drawing.Color.White;
+            this.lblTituPontos.Location = new System.Drawing.Point(397, 9);
+            this.lblTituPontos.Name = "lblTituPontos";
+            this.lblTituPontos.Size = new System.Drawing.Size(131, 32);
+            this.lblTituPontos.TabIndex = 4;
+            this.lblTituPontos.Text = "PONTOS";
+            this.lblTituPontos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblVidas
+            // 
+            this.lblVidas.AutoSize = true;
+            this.lblVidas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVidas.ForeColor = System.Drawing.Color.White;
+            this.lblVidas.Location = new System.Drawing.Point(330, 44);
+            this.lblVidas.Name = "lblVidas";
+            this.lblVidas.Size = new System.Drawing.Size(22, 24);
+            this.lblVidas.TabIndex = 3;
+            this.lblVidas.Text = "0";
+            this.lblVidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblY
             // 
@@ -85,18 +159,6 @@ namespace Run_and_Get
             this.lblDistY.TabIndex = 4;
             this.lblDistY.Text = "Distância Y:";
             this.lblDistY.Visible = false;
-            // 
-            // lblVidas
-            // 
-            this.lblVidas.AutoSize = true;
-            this.lblVidas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVidas.ForeColor = System.Drawing.Color.White;
-            this.lblVidas.Location = new System.Drawing.Point(330, 44);
-            this.lblVidas.Name = "lblVidas";
-            this.lblVidas.Size = new System.Drawing.Size(22, 24);
-            this.lblVidas.TabIndex = 3;
-            this.lblVidas.Text = "0";
-            this.lblVidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblX
             // 
@@ -148,66 +210,6 @@ namespace Run_and_Get
             this.pbxJogador.TabIndex = 1;
             this.pbxJogador.TabStop = false;
             // 
-            // lblTituPontos
-            // 
-            this.lblTituPontos.AutoSize = true;
-            this.lblTituPontos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituPontos.ForeColor = System.Drawing.Color.White;
-            this.lblTituPontos.Location = new System.Drawing.Point(397, 9);
-            this.lblTituPontos.Name = "lblTituPontos";
-            this.lblTituPontos.Size = new System.Drawing.Size(131, 32);
-            this.lblTituPontos.TabIndex = 4;
-            this.lblTituPontos.Text = "PONTOS";
-            this.lblTituPontos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPontos
-            // 
-            this.lblPontos.AutoSize = true;
-            this.lblPontos.Font = new System.Drawing.Font("Arial Rounded MT Bold", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPontos.ForeColor = System.Drawing.Color.White;
-            this.lblPontos.Location = new System.Drawing.Point(438, 44);
-            this.lblPontos.Name = "lblPontos";
-            this.lblPontos.Size = new System.Drawing.Size(41, 43);
-            this.lblPontos.TabIndex = 5;
-            this.lblPontos.Text = "0";
-            this.lblPontos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTituEnergia
-            // 
-            this.lblTituEnergia.AutoSize = true;
-            this.lblTituEnergia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituEnergia.ForeColor = System.Drawing.Color.White;
-            this.lblTituEnergia.Location = new System.Drawing.Point(550, 22);
-            this.lblTituEnergia.Name = "lblTituEnergia";
-            this.lblTituEnergia.Size = new System.Drawing.Size(81, 22);
-            this.lblTituEnergia.TabIndex = 6;
-            this.lblTituEnergia.Text = "Energia";
-            this.lblTituEnergia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblEnergia
-            // 
-            this.lblEnergia.AutoSize = true;
-            this.lblEnergia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnergia.ForeColor = System.Drawing.Color.White;
-            this.lblEnergia.Location = new System.Drawing.Point(578, 46);
-            this.lblEnergia.Name = "lblEnergia";
-            this.lblEnergia.Size = new System.Drawing.Size(21, 22);
-            this.lblEnergia.TabIndex = 7;
-            this.lblEnergia.Text = "0";
-            this.lblEnergia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblTituVidas
-            // 
-            this.lblTituVidas.AutoSize = true;
-            this.lblTituVidas.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituVidas.ForeColor = System.Drawing.Color.White;
-            this.lblTituVidas.Location = new System.Drawing.Point(307, 22);
-            this.lblTituVidas.Name = "lblTituVidas";
-            this.lblTituVidas.Size = new System.Drawing.Size(61, 22);
-            this.lblTituVidas.TabIndex = 8;
-            this.lblTituVidas.Text = "Vidas";
-            this.lblTituVidas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblValorTicks
             // 
             this.lblValorTicks.AutoSize = true;
@@ -218,6 +220,15 @@ namespace Run_and_Get
             this.lblValorTicks.TabIndex = 6;
             this.lblValorTicks.Text = "Ticks: ";
             this.lblValorTicks.Visible = false;
+            // 
+            // pgbEnergia
+            // 
+            this.pgbEnergia.Location = new System.Drawing.Point(12, 87);
+            this.pgbEnergia.Maximum = 200;
+            this.pgbEnergia.Name = "pgbEnergia";
+            this.pgbEnergia.Size = new System.Drawing.Size(876, 10);
+            this.pgbEnergia.TabIndex = 9;
+            this.pgbEnergia.Value = 100;
             // 
             // frmJogo
             // 
@@ -264,5 +275,6 @@ namespace Run_and_Get
         private System.Windows.Forms.Label lblTituPontos;
         private System.Windows.Forms.Label lblTituVidas;
         private System.Windows.Forms.Label lblValorTicks;
+        private System.Windows.Forms.ProgressBar pgbEnergia;
     }
 }

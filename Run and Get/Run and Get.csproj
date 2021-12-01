@@ -53,6 +53,12 @@
     <Compile Include="frmCapa.Designer.cs">
       <DependentUpon>frmCapa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmFimDeJogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFimDeJogo.Designer.cs">
+      <DependentUpon>frmFimDeJogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmJogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCapa.resx">
       <DependentUpon>frmCapa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFimDeJogo.resx">
+      <DependentUpon>frmFimDeJogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmJogo.resx">
       <DependentUpon>frmJogo.cs</DependentUpon>

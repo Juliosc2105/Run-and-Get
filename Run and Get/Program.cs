@@ -16,7 +16,7 @@ namespace Run_and_Get
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmCapa());
+            Application.Run(new frmCapa());
             Application.Run(new frmLogin());
         }
     }

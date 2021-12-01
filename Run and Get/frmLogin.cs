@@ -76,10 +76,6 @@ namespace Run_and_Get
 
                 if (senhaCorreta == txtSenha.Text)
                 {
-                    MessageBox.Show("AEEEEE MALANDRO, ACERTOU!",
-                        "Informação",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Exclamation);
                     frmJogo jogo = new frmJogo(txtLogin.Text);
                     Visible = false;
                     jogo.ShowDialog();
@@ -87,8 +83,7 @@ namespace Run_and_Get
                 }
                 else
                 {
-                    MessageBox.Show("ERROU, ERROU FEIO, ERROU RUDE \n" +
-                        "Sua senha é: " + senhaCorreta,
+                    MessageBox.Show("Senha incorreta.",
                         "Informação",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Exclamation);
